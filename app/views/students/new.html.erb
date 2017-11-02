@@ -1,4 +1,4 @@
-<!-- <h3>Student Form</h3>
+<h3>Student Form</h3>
 <%= form_tag students_path do %>
 <label>First Name: </label><br>
 <%= text_field_tag :'first_name' %><br>
@@ -14,9 +14,9 @@
 
 <% if !!@student %>
   <%= @student.first_name %>
-<% end %> -->
+<% end %>
 
-<h3>Student Form</h3>
+<!-- <h3>Student Form</h3>
 <form>
   <label>First name:</label>
   <input type="text" id="first_name" name="first_name"><br>
@@ -25,5 +25,5 @@
   <input type="text" id="last_name" name="last_name"><br>
 
   <input type="submit" value="Submit Student">
-</form>
+</form> -->
 <%= params.inspect %>
