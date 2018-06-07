@@ -1,0 +1,12 @@
+<%= form_tag students_path do %>
+  Student Form<br>
+
+  <label>Student first_name:</label><br>
+  <%= text_field_tag :first_name %><br>
+
+  <label>Student last_name:</label><br>
+  <%= text_field_tag :last_name %><br>
+
+  <%= submit_tag "Submit Student" %>
+<% end %>
+
