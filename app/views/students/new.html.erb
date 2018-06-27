@@ -1,0 +1,19 @@
+<%= content_tag(:h1, "Student Form") %>
+
+<%= form_tag students_path do %>
+
+  <%= content_tag(:label, "Student first name:") %><br>
+  <%= text_field_tag :first_name %><br>
+
+  <%= content_tag(:label, "Student last name:") %><br>
+  <%= text_field_tag :last_name %><br>
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+
+  <%= submit_tag "Submit Student" %>
+
+<% end %>
+
+<%= params.inspect %>
+
+<%= content_tag(:p, @student.to_s) if @student %>
