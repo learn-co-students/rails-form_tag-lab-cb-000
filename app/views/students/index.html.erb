@@ -1,5 +1,9 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= link_to student.to_s, student_path(student) %></div>
+    <h2><%= link_to student.to_s, student_path(student) %></h2>
   <% end %>
 </div>
+
+<%= form_tag new_student_path, :method => :get do %>
+  <%= submit_tag "Creat New Student" %>
+<% end %>
