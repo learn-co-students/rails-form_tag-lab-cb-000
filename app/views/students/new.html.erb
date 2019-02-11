@@ -1,6 +1,6 @@
 <h1>Student Form</h1>
 
-<%= form_tag students_path do %>
+<%= form_tag students_path do %> <%# The default method of this route_helper is POST by default %>
   <label>First Name: </label><br>
   <%= text_field_tag :'first_name' %>
   <br>
