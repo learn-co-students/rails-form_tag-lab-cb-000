@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Student Form</title>
+  </head>
+  <body>
+    <h3>Student Form</h3>
+    <%= form_tag students_path do %>
+      <label>First Name:</label><br>
+      <%= text_field_tag :'student[first_name]' %><br>
+
+      <label>Last Name:</label><br>
+      <%= text_field_tag :'student[last_name]' %><br>
+
+      <input type="submit" value="Submit Student">
+    <% end %>
+
+    <h3><%= @student.to_s %></h3>
+
+  </body>
+</html>
