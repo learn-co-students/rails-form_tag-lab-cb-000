@@ -1,0 +1,17 @@
+<h1>Student Form</h1>
+
+<form action="<%= students_path %>" method="post">
+  <%= form_tag students_path do %>
+    <label>First Name</label><br>
+    <%= text_field_tag :'student[first_name]' %><br>
+ 
+    <label>Last Name</label><br>
+    <%= text_field_tag :'student[last_name]' %><br>
+
+    <%= submit_tag "Submit Student" %>
+
+  <% end %>
+</form>
+
+<%= session[:form_params] if session[:form_params] %>
+<!-- never would have known how to do the above if did not peek at solution. This is totally different from the previous lesson where the form action was left out intentionally, then params.inspect after the form reveals the parameters upon submit without leaving the page (it also totally works for this lab *in-browser*, yet, it does not satisfay the test, even though what I see in my browser sure looks like it would). Why are we asked to do this weird redirect-right-back-to-the-form-view, when we can just as easily get the student created and redirect to either a show or index page, which will in itself evidence that the new student was persisted? If this is a typical form development strategy, the lesson should say as such. An explanation of the difference between the approach used in the previous lesson and this one, and why, would be great. Oh, and a hint to use the session[:form_params] syntax would have been infinitely helpful. Sheesh. -->
